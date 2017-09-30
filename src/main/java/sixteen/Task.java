@@ -10,14 +10,14 @@ import java.util.LinkedList;
  */
 public abstract class Task<T> {
 
-    private static final String INPUT_PATH = "resources/input/";
+    private static final String INPUT_PATH = "src/main/resources/input/";
     private static String INPUT_FILE_NAME;
 
-    public Task(String fileName) {
-        this.INPUT_FILE_NAME = fileName;
+    Task(String fileName) {
+        INPUT_FILE_NAME = fileName;
     }
 
-    public LinkedList<String> readFile() {
+    LinkedList<String> readFile() {
         LinkedList<String> fileContent = new LinkedList<>();
         try {
             Files.lines(Paths.get(INPUT_PATH + INPUT_FILE_NAME)).forEach(fileContent::add);
