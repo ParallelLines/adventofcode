@@ -42,7 +42,10 @@ public class One extends Task<Integer> {
         super(fileName);
     }
 
+    public static void main(String[] args) {
+        System.out.print(new One("day1_1.txt").solve());
 
+    }
 
     @Override
     public Integer solve() {
@@ -59,7 +62,6 @@ public class One extends Task<Integer> {
         private Pair<Integer, Integer> position;
         private LinkedList<Segment> allSegments;
         private Pair<Integer, Integer> firstPositionVisitedTwice = null;
-
 
         Me(Direction currentDirection, Pair<Integer, Integer> position) {
             this.currentDirection = currentDirection;
